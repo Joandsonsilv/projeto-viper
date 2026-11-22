@@ -1,0 +1,1470 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vifer | Ferro e Aço</title>
+
+<style>
+:root {
+    --blue: #07134f;
+    --dark: #050d35;
+    --yellow: #f5c522;
+    --white: #fff;
+    --bg: #f5f6fa;
+    --text: #20283b;
+    --muted: #687187;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* CABEÇALHO */
+
+.topbar {
+    background: var(--dark);
+    color: white;
+    padding: 10px 7%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    gap: 12px;
+}
+
+.topbar a {
+    color: var(--yellow);
+    font-weight: bold;
+}
+
+header {
+    background: var(--blue);
+}
+
+nav {
+    max-width: 1500px;
+    margin: auto;
+    padding: 20px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    font-size: 29px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.brand-mark {
+    border: 2px solid var(--yellow);
+    color: var(--yellow);
+    padding: 8px 12px;
+    transform: skew(-8deg);
+}
+
+.brand small {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin-top: 4px;
+}
+
+.navlinks {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.navlinks a:hover {
+    color: var(--yellow);
+}
+
+.nav-contact {
+    background: var(--yellow);
+    color: var(--blue) !important;
+    padding: 14px 20px;
+    border-radius: 8px;
+}
+
+/* INÍCIO */
+
+.hero {
+    background:
+        radial-gradient(circle at 80% 50%, #14245d, transparent 42%),
+        linear-gradient(110deg, #050d35, #09164f);
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 1500px;
+    min-height: 570px;
+    padding: 65px 7%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    align-items: center;
+    gap: 45px;
+}
+
+.hero-text {
+    z-index: 2;
+}
+
+.eyebrow {
+    color: var(--yellow);
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    color: white;
+    font-size: clamp(40px, 5vw, 65px);
+    line-height: 1.08;
+    margin: 22px 0;
+    max-width: 750px;
+}
+
+.hero p {
+    color: #d8def4;
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 620px;
+}
+
+.actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 16px 23px;
+    border-radius: 9px;
+    font-weight: bold;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn-yellow {
+    background: var(--yellow);
+    color: var(--blue);
+}
+
+.btn-yellow:hover {
+    background: #ffda56;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    color: white;
+    border: 1px solid #aab5dc;
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--blue);
+}
+
+/* PAINEL DO LADO DIREITO */
+
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.info-panel {
+    width: 100%;
+    max-width: 490px;
+    padding: 35px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+
+.info-panel h2 {
+    color: var(--yellow);
+    font-size: 21px;
+    margin-bottom: 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+    margin-bottom: 27px;
+}
+
+.info-item:last-child {
+    margin-bottom: 0;
+}
+
+.info-icon {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 8px;
+    color: var(--yellow);
+    font-size: 19px;
+}
+
+.info-item h3 {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.info-item p {
+    color: #d0d8f4;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* SEÇÕES */
+
+.container {
+    max-width: 1200px;
+    padding: 0 22px;
+    margin: auto;
+}
+
+.section {
+    padding: 75px 0;
+}
+
+.section-head {
+    margin-bottom: 32px;
+}
+
+.section-head h2 {
+    color: var(--blue);
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.section-head p {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.center {
+    text-align: center;
+}
+
+.center .section-head p {
+    max-width: 650px;
+    margin: auto;
+}
+
+/* CATEGORIAS */
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.category {
+    background: white;
+    padding: 28px 18px;
+    border: 1px solid #e6e9f0;
+    border-radius: 12px;
+    text-align: center;
+    transition: .2s;
+}
+
+.category:hover {
+    transform: translateY(-5px);
+    border-color: var(--yellow);
+}
+
+.category-icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.category h3 {
+    color: var(--blue);
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.category p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* BANNER */
+
+.banner {
+    margin-top: 35px;
+    padding: 35px;
+    background: var(--blue);
+    color: white;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.banner h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    color: #d8def4;
+    line-height: 1.6;
+}
+
+/* PRODUTOS */
+
+#catalogo {
+    background: white;
+}
+
+.toolbar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.search {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #dce0ea;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+}
+
+.search:focus {
+    border-color: var(--blue);
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.filter {
+    padding: 10px 16px;
+    border-radius: 30px;
+    border: 1px solid #e1e4eb;
+    background: white;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.filter.active {
+    background: var(--blue);
+    color: white;
+    border-color: var(--blue);
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 22px;
+    align-items: start;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px;
+}
+
+.product {
+    background: white;
+    border: 1px solid #e6e9f0;
+    border-radius: 11px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: .2s;
+}
+
+.product:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px #00000012;
+}
+
+.product-image {
+    height: 165px;
+    overflow: hidden;
+    background: #edf0f7;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: .3s;
+}
+
+.product:hover img {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.product-info small {
+    color: #9a7600;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.product-info h3 {
+    color: var(--blue);
+    margin: 9px 0;
+    font-size: 16px;
+}
+
+.product-info p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.add {
+    margin-top: auto;
+    background: #edf0f8;
+    color: var(--blue);
+    border: none;
+    border-radius: 7px;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.add:hover {
+    background: var(--yellow);
+}
+
+/* ORÇAMENTO */
+
+.cart {
+    background: white;
+    border: 1px solid #e6e9f0;
+    padding: 20px;
+    border-radius: 12px;
+    position: sticky;
+    top: 15px;
+}
+
+.cart h3 {
+    color: var(--blue);
+    margin-bottom: 8px;
+}
+
+.cart-sub {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.empty {
+    border: 1px dashed #cbd2e2;
+    border-radius: 8px;
+    padding: 22px 12px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.cart-row {
+    padding: 12px 0;
+    border-bottom: 1px solid #e6e9f0;
+}
+
+.cart-row strong {
+    font-size: 13px;
+    display: block;
+}
+
+.cart-row small {
+    color: var(--muted);
+}
+
+.qty {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 9px;
+}
+
+.qty button {
+    width: 27px;
+    height: 27px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.remove {
+    margin-left: auto;
+    color: #b42318;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.send {
+    width: 100%;
+    margin-top: 17px;
+    background: #16834a;
+    color: white;
+}
+
+.send:disabled {
+    opacity: .45;
+    cursor: not-allowed;
+}
+
+.clear {
+    width: 100%;
+    background: transparent;
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+/* SOBRE NÓS - SOMENTE TEXTO */
+
+#empresa {
+    background: var(--bg);
+}
+
+.about {
+    display: block;
+    max-width: 900px;
+    margin: auto;
+}
+
+.about-text {
+    width: 100%;
+}
+
+.about-text h2 {
+    color: var(--blue);
+    font-size: 35px;
+    margin: 15px 0 22px;
+}
+
+.about-text p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+    max-width: 850px;
+}
+
+.about-text .btn {
+    margin-top: 10px;
+}
+
+/* CONTATO */
+
+#contato {
+    background: #eef0f7;
+}
+
+.contact-box {
+    background: var(--blue);
+    color: white;
+    padding: 42px;
+    border-radius: 14px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+
+.contact-box h2 {
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+.contact-box p {
+    color: #d8def4;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.contact-info {
+    background: #ffffff12;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.contact-info h3 {
+    margin-bottom: 18px;
+}
+
+.contact-info p {
+    margin-bottom: 12px;
+}
+
+.contact-info strong {
+    color: var(--yellow);
+}
+
+/* RODAPÉ */
+
+footer {
+    background: var(--dark);
+    color: #d8def4;
+    text-align: center;
+    padding: 30px;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+footer strong {
+    color: white;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+/* WHATSAPP */
+
+.whatsapp {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    background: #16834a;
+    color: white;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 25px;
+    z-index: 99;
+}
+
+/* NOTIFICAÇÃO */
+
+.toast {
+    position: fixed;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #172033;
+    color: white;
+    padding: 13px 20px;
+    border-radius: 30px;
+    font-size: 13px;
+    opacity: 0;
+    pointer-events: none;
+    transition: .2s;
+    z-index: 100;
+}
+
+.toast.show {
+    opacity: 1;
+}
+
+/* RESPONSIVIDADE */
+
+@media(max-width: 1000px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .cart {
+        position: static;
+        order: -1;
+    }
+
+    .categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .info-panel {
+        padding: 25px;
+    }
+}
+
+@media(max-width: 650px) {
+    .topbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        padding: 18px;
+    }
+
+    .brand {
+        font-size: 21px;
+    }
+
+    .navlinks {
+        display: none;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        padding: 55px 22px;
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .hero-visual {
+        padding: 0;
+    }
+
+    .info-panel {
+        padding: 25px;
+    }
+
+    .section {
+        padding: 55px 0;
+    }
+
+    .section-head h2 {
+        font-size: 27px;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .product-image {
+        height: 115px;
+    }
+
+    .product-info {
+        padding: 11px;
+    }
+
+    .product-info h3 {
+        font-size: 13px;
+    }
+
+    .product-info p {
+        font-size: 11px;
+    }
+
+    .add {
+        font-size: 11px;
+        padding: 10px 5px;
+    }
+
+    .banner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 25px;
+    }
+
+    .about-text h2 {
+        font-size: 28px;
+    }
+
+    .about-text p {
+        font-size: 14px;
+    }
+
+    .contact-box {
+        grid-template-columns: 1fr;
+        padding: 25px;
+    }
+
+    .contact-box h2 {
+        font-size: 25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+    <span>📍 Rua São José do Paraíso, 199 — Guarulhos/SP</span>
+    <a href="https://wa.me/5511947346805" target="_blank">
+        WhatsApp: (11) 94734-6805
+    </a>
+</div>
+
+<header>
+    <nav>
+        <a class="brand" href="#">
+            <span class="brand-mark">VF</span>
+            <span>
+                VIFER
+                <small>FERRO E AÇO</small>
+            </span>
+        </a>
+
+        <div class="navlinks">
+            <a href="#">Início</a>
+            <a href="#categorias">Categorias</a>
+            <a href="#catalogo">Produtos</a>
+            <a href="#empresa">Sobre nós</a>
+            <a href="#contato" class="nav-contact">Contato</a>
+        </div>
+    </nav>
+
+    <!-- INÍCIO -->
+
+    <section class="hero">
+        <div class="hero-content">
+
+            <div class="hero-text">
+                <div class="eyebrow">
+                    Vifer Comércio de Ferro e Aço
+                </div>
+
+                <h1>
+                    Qualidade e variedade para seus projetos.
+                </h1>
+
+                <p>
+                    Encontre materiais para serralheria, construção e indústria.
+                    Conheça nossos produtos e conte com a Vifer para encontrar
+                    as soluções que seu projeto precisa.
+                </p>
+
+                <div class="actions">
+                    <a href="#catalogo" class="btn btn-yellow">
+                        Conhecer produtos →
+                    </a>
+
+                    <a href="https://wa.me/5511947346805"
+                       target="_blank"
+                       class="btn btn-outline">
+                        Falar com a Vifer
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="info-panel">
+
+                    <h2>Encontre o que precisa</h2>
+
+                    <div class="info-item">
+                        <div class="info-icon">▤</div>
+                        <div>
+                            <h3>Variedade de materiais</h3>
+                            <p>
+                                Produtos para serralheria,
+                                construção e indústria.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">✓</div>
+                        <div>
+                            <h3>Orçamento simplificado</h3>
+                            <p>
+                                Monte sua lista e envie
+                                pelo WhatsApp.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">☏</div>
+                        <div>
+                            <h3>Atendimento direto</h3>
+                            <p>
+                                Converse com nossa equipe
+                                e consulte seus produtos.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+</header>
+
+<main>
+
+<!-- CATEGORIAS -->
+
+<section class="section" id="categorias">
+    <div class="container">
+
+        <div class="section-head center">
+            <h2>Nossas categorias</h2>
+            <p>
+                Conheça algumas das principais categorias de produtos
+                disponíveis na Vifer.
+            </p>
+        </div>
+
+        <div class="categories">
+
+            <a href="#catalogo" class="category">
+                <div class="category-icon">▰</div>
+                <h3>Tubos e Vigas</h3>
+                <p>Materiais para estruturas e projetos.</p>
+            </a>
+
+            <a href="#catalogo" class="category">
+                <div class="category-icon">▤</div>
+                <h3>Telhas</h3>
+                <p>Materiais para coberturas e construções.</p>
+            </a>
+
+            <a href="#catalogo" class="category">
+                <div class="category-icon">⚒</div>
+                <h3>Ferramentas</h3>
+                <p>Produtos para diferentes aplicações.</p>
+            </a>
+
+            <a href="#catalogo" class="category">
+                <div class="category-icon">⚙</div>
+                <h3>Automação</h3>
+                <p>Componentes e soluções para automatizadores.</p>
+            </a>
+
+        </div>
+
+        <div class="banner">
+            <div>
+                <h3>Encontre o que precisa para seu projeto.</h3>
+                <p>Explore nosso catálogo e solicite um orçamento.</p>
+            </div>
+
+            <a href="#catalogo" class="btn btn-yellow">
+                Ver produtos →
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- CATÁLOGO -->
+
+<section class="section" id="catalogo">
+    <div class="container">
+
+        <div class="section-head">
+            <h2>Nosso catálogo</h2>
+            <p>
+                Escolha os produtos desejados e monte sua lista de orçamento.
+            </p>
+        </div>
+
+        <div class="toolbar">
+            <input
+                id="search"
+                class="search"
+                type="search"
+                placeholder="Pesquisar produto..."
+            >
+
+            <div class="filters" id="filters"></div>
+        </div>
+
+        <div class="layout">
+
+            <div class="products" id="products"></div>
+
+            <aside class="cart">
+                <h3>Seu orçamento</h3>
+                <p class="cart-sub">
+                    Produtos selecionados para sua solicitação.
+                </p>
+
+                <div id="cartItems">
+                    <div class="empty">
+                        Sua lista está vazia.
+                    </div>
+                </div>
+
+                <button id="send" class="btn send" disabled>
+                    Enviar pelo WhatsApp
+                </button>
+
+                <button id="clear" class="btn clear">
+                    Limpar lista
+                </button>
+            </aside>
+
+        </div>
+    </div>
+</section>
+
+<!-- SOBRE NÓS: SEM IMAGEM -->
+
+<section class="section" id="empresa">
+    <div class="container">
+
+        <div class="about">
+
+            <div class="about-text">
+
+                <div class="eyebrow">Conheça a Vifer</div>
+
+                <h2>Sobre nossa empresa</h2>
+
+                <p>
+                    A Vifer Comércio de Ferro e Aço atua no fornecimento
+                    de materiais para serralheria, construção e indústria,
+                    oferecendo variedade de produtos para diferentes
+                    necessidades.
+                </p>
+
+                <p>
+                    Nosso catálogo reúne tubos, vigas, telhas, ferramentas,
+                    acessórios e soluções para automação.
+                </p>
+
+                <p>
+                    Nosso objetivo é facilitar a busca pelos materiais
+                    necessários para cada projeto, proporcionando
+                    praticidade no atendimento e na solicitação de orçamentos.
+                </p>
+
+                <a href="#contato" class="btn btn-yellow">
+                    Entre em contato →
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTATO -->
+
+<section class="section" id="contato">
+    <div class="container">
+
+        <div class="contact-box">
+
+            <div>
+                <div class="eyebrow">Fale conosco</div>
+
+                <h2>
+                    Precisa de um orçamento?
+                </h2>
+
+                <p>
+                    Nossa equipe está disponível para atender você.
+                    Entre em contato e consulte nossos produtos.
+                </p>
+
+                <a href="https://wa.me/5511947346805"
+                   target="_blank"
+                   class="btn btn-yellow">
+                    Conversar pelo WhatsApp →
+                </a>
+            </div>
+
+            <div class="contact-info">
+                <h3>Informações de contato</h3>
+
+                <p>
+                    <strong>Telefone:</strong><br>
+                    (11) 2806-9048
+                </p>
+
+                <p>
+                    <strong>WhatsApp:</strong><br>
+                    (11) 94734-6805
+                </p>
+
+                <p>
+                    <strong>Endereço:</strong><br>
+                    Rua São José do Paraíso, 199<br>
+                    Parque das Nações — Guarulhos/SP
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <strong>VIFER FERRO E AÇO</strong>
+    <p>Materiais para serralheria, construção e indústria.</p>
+    <p>Guarulhos — São Paulo</p>
+    <p>© 2026 Vifer Ferro e Aço. Todos os direitos reservados.</p>
+</footer>
+
+<a href="https://wa.me/5511947346805"
+   target="_blank"
+   class="whatsapp"
+   aria-label="WhatsApp">
+    ☎
+</a>
+
+<div class="toast" id="toast"></div>
+
+<script>
+
+/* PRODUTOS */
+
+const products = [
+    {
+        name: "Tubos metálicos",
+        category: "Tubos",
+        description: "Perfis e tubos para diferentes aplicações.",
+        image: "https://loremflickr.com/900/600/steel,tubes?lock=11"
+    },
+    {
+        name: "Vigas metálicas",
+        category: "Vigas",
+        description: "Materiais para estruturas e projetos.",
+        image: "https://loremflickr.com/900/600/steel,beams?lock=12"
+    },
+    {
+        name: "Telhas",
+        category: "Telhas",
+        description: "Opções para coberturas.",
+        image: "https://loremflickr.com/900/600/metal,roofing?lock=13"
+    },
+    {
+        name: "Roldanas",
+        category: "Acessórios",
+        description: "Componentes para sistemas deslizantes.",
+        image: "https://loremflickr.com/900/600/metal,pulley?lock=14"
+    },
+    {
+        name: "Discos de corte",
+        category: "Acessórios",
+        description: "Discos para corte e acabamento.",
+        image: "https://loremflickr.com/900/600/abrasive,cutting,disc?lock=15"
+    },
+    {
+        name: "Rodízios",
+        category: "Acessórios",
+        description: "Rodízios e componentes.",
+        image: "https://loremflickr.com/900/600/caster,wheels?lock=16"
+    },
+    {
+        name: "Ferramentas",
+        category: "Ferramentas",
+        description: "Ferramentas para o dia a dia.",
+        image: "https://loremflickr.com/900/600/industrial,tools?lock=17"
+    },
+    {
+        name: "Arame MIG",
+        category: "Soldagem",
+        description: "Arame para processos de soldagem MIG.",
+        image: "https://loremflickr.com/900/600/welding,wire?lock=18"
+    },
+    {
+        name: "Máquina de solda",
+        category: "Soldagem",
+        description: "Equipamentos para soldagem.",
+        image: "https://loremflickr.com/900/600/welding,machine?lock=19"
+    },
+    {
+        name: "Controles",
+        category: "Acessórios",
+        description: "Controles para automatizadores.",
+        image: "https://loremflickr.com/900/600/remote,control?lock=20"
+    },
+    {
+        name: "Caixas de correio",
+        category: "Acessórios",
+        description: "Caixas de correio.",
+        image: "https://loremflickr.com/900/600/mailbox,metal?lock=21"
+    },
+    {
+        name: "Galvite",
+        category: "Acessórios",
+        description: "Acessórios diversos.",
+        image: "https://loremflickr.com/900/600/galvanized,metal?lock=22"
+    },
+    {
+        name: "Centrais",
+        category: "Automação",
+        description: "Centrais para automatização.",
+        image: "https://loremflickr.com/900/600/electronic,circuit,board?lock=23"
+    },
+    {
+        name: "Motores",
+        category: "Automação",
+        description: "Motores para portões e sistemas.",
+        image: "https://loremflickr.com/900/600/electric,motor?lock=24"
+    },
+    {
+        name: "Fechaduras",
+        category: "Ferragens",
+        description: "Fechaduras e ferragens.",
+        image: "https://loremflickr.com/900/600/door,lock,metal?lock=25"
+    }
+];
+
+/* CONFIGURAÇÕES */
+
+const categories = [
+    "Todos",
+    ...new Set(products.map(p => p.category))
+];
+
+let active = "Todos";
+let cart = {};
+
+const $ = selector => document.querySelector(selector);
+
+/* FILTROS */
+
+function renderFilters() {
+    $("#filters").innerHTML = categories.map(category => `
+        <button
+            class="filter ${category === active ? "active" : ""}"
+            data-cat="${category}">
+            ${category}
+        </button>
+    `).join("");
+}
+
+/* PRODUTOS */
+
+function renderProducts() {
+    const query = $("#search").value.toLowerCase().trim();
+
+    const shown = products.filter(product => {
+        const categoryMatch =
+            active === "Todos" || product.category === active;
+
+        const searchMatch =
+            product.name.toLowerCase().includes(query) ||
+            product.category.toLowerCase().includes(query);
+
+        return categoryMatch && searchMatch;
+    });
+
+    $("#products").innerHTML = shown.map(product => `
+        <article class="product">
+
+            <div class="product-image">
+                <img
+                    src="${product.image}"
+                    alt="${product.name}"
+                    loading="lazy"
+                    onerror="this.src='https://loremflickr.com/900/600/metal,industry?lock=99'">
+            </div>
+
+            <div class="product-info">
+                <small>${product.category}</small>
+                <h3>${product.name}</h3>
+                <p>${product.description}</p>
+
+                <button class="add" data-add="${product.name}">
+                    + Adicionar ao orçamento
+                </button>
+            </div>
+
+        </article>
+    `).join("") || "<p>Nenhum produto encontrado.</p>";
+}
+
+/* ORÇAMENTO */
+
+function renderCart() {
+    const entries = Object.entries(cart);
+
+    $("#cartItems").innerHTML = entries.length
+        ? entries.map(([name, quantity]) => `
+            <div class="cart-row">
+                <strong>${name}</strong>
+                <small>Quantidade: ${quantity}</small>
+
+                <div class="qty">
+                    <button data-change="-1" data-name="${name}">−</button>
+                    <b>${quantity}</b>
+                    <button data-change="1" data-name="${name}">+</button>
+                    <button class="remove" data-remove="${name}">
+                        Remover
+                    </button>
+                </div>
+            </div>
+        `).join("")
+        : `<div class="empty">Sua lista está vazia.</div>`;
+
+    $("#send").disabled = !entries.length;
+}
+
+/* NOTIFICAÇÃO */
+
+let toastTimer;
+
+function toast(message) {
+    $("#toast").textContent = message;
+    $("#toast").classList.add("show");
+
+    clearTimeout(toastTimer);
+
+    toastTimer = setTimeout(() => {
+        $("#toast").classList.remove("show");
+    }, 2000);
+}
+
+/* EVENTOS */
+
+document.addEventListener("click", event => {
+
+    const category = event.target.dataset.cat;
+
+    if (category) {
+        active = category;
+        renderFilters();
+        renderProducts();
+    }
+
+    const add = event.target.dataset.add;
+
+    if (add) {
+        cart[add] = (cart[add] || 0) + 1;
+        renderCart();
+        toast("Produto adicionado ao orçamento!");
+    }
+
+    const change = event.target.dataset.change;
+
+    if (change !== undefined) {
+        const name = event.target.dataset.name;
+
+        cart[name] += Number(change);
+
+        if (cart[name] <= 0) {
+            delete cart[name];
+        }
+
+        renderCart();
+    }
+
+    const remove = event.target.dataset.remove;
+
+    if (remove) {
+        delete cart[remove];
+        renderCart();
+        toast("Produto removido.");
+    }
+});
+
+/* PESQUISA */
+
+$("#search").addEventListener("input", renderProducts);
+
+/* LIMPAR */
+
+$("#clear").addEventListener("click", () => {
+    cart = {};
+    renderCart();
+    toast("Lista limpa!");
+});
+
+/* WHATSAPP */
+
+$("#send").addEventListener("click", () => {
+
+    const entries = Object.entries(cart);
+
+    if (!entries.length) return;
+
+    const lines = entries.map(([name, quantity]) =>
+        `• ${name} — ${quantity} unidade(s)`
+    ).join("\n");
+
+    const message = `Olá! Gostaria de solicitar um orçamento com a Vifer Ferro e Aço:
+
+${lines}
+
+Poderiam me informar os valores e a disponibilidade?
+
+Obrigado!`;
+
+    const url =
+        "https://wa.me/5511947346805?text=" +
+        encodeURIComponent(message);
+
+    window.open(url, "_blank");
+});
+
+/* INICIALIZAÇÃO */
+
+renderFilters();
+renderProducts();
+renderCart();
+
+</script>
+
+</body>
+</html>
