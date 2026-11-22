@@ -1,0 +1,15 @@
+VIFER FERRO E AÇO — DEMONSTRAÇÃO
+
+Abra o arquivo index.html em um navegador para visualizar o site.
+
+Funcionalidades incluídas:
+- Layout responsivo para celular e computador
+- Catálogo com categorias e busca
+- Lista/carrinho de orçamento com quantidades
+- Envio da lista selecionada para o WhatsApp (11) 94734-6805
+
+Observações:
+- Esta é uma demonstração inicial. Os nomes e descrições dos produtos foram organizados a partir das imagens fornecidas.
+- Não foram cadastrados preços, medidas, marcas ou disponibilidade.
+- Antes de publicar, confirme os produtos, imagens reais, dados comerciais e textos com a empresa.
+- O botão de orçamento abre o WhatsApp com a mensagem preenchida; o cliente precisa tocar em enviar.
